@@ -10,21 +10,7 @@ import org.lineageos.generatebp.models.Module
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-}
-
-apply {
-    plugin<GenerateBpPlugin>()
-}
-
-buildscript {
-    repositories {
-        mavenLocal()
-        // maven("https://raw.githubusercontent.com/lineage-next/gradle-generatebp/v1.22/.m2")
-    }
-
-    dependencies {
-        classpath("org.lineageos:gradle-generatebp:+")
-    }
+    id("org.lineageos.generatebp")
 }
 
 android {
